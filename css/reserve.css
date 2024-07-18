@@ -1,0 +1,116 @@
+/******************************* main setting *******************************/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --bg-color: #fff;
+    --text-color: #000;
+    --hover-color: #6077fa;
+}
+section{
+    margin: 30px;
+}
+body{
+    background: #48504873;
+}
+
+/******************************* main setting *******************************/
+
+
+/******************************* body section *******************************/
+
+.text{
+    letter-spacing: 1px;
+    line-height: 2;
+}
+.inputs textarea{
+    width: 100%;
+    height: 60px;
+    resize: none;
+    font-size: 20px;
+    font-weight: 200;
+}
+.inputs .i{
+    width: 100%;
+    height: 100px;
+    resize: none;
+    font-size: 20px;
+    font-weight: 200;
+}
+.inputs h2{
+    margin-top: 20px;
+}
+.inputs .div{
+    display: flex;
+}
+.inputs .div .d{
+    margin-left: 20px;
+}
+.inputs h2{
+    font-weight: lighter;
+}
+.but button{
+    background: var(--text-color);
+    color: var(--bg-color);
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+.but a{
+    text-decoration: none;
+    color: var(--bg-color);
+}
+.custom-select{
+    font-size: 20px;
+    font-weight: 200;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.custom-select select{
+    display: none;
+    color: var(--bg-color);
+}
+.select-selected{
+    background-color: var(--bg-color);
+    height: 25px;
+}
+.select-selected:after{
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: var(--text-color) transparent transparent transparent;
+}
+.select-selected .select-arrow-active:after{
+    border-color: var(--bg-color) transparent;
+    top: 7px;
+}
+.select-items div, .select-selected{
+    color: var(--text-color);
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: var(--bg-color) transparent;
+    cursor: pointer;
+}
+.select-items{
+    position: absolute;
+    background-color: var(--bg-color);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+.select-hide{
+    display: none;
+}
+.select-items div:hover, .same-as-selected{
+    background-color: var(--hover-color);
+}
+
+/******************************* body section *******************************/

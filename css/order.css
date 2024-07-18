@@ -1,0 +1,226 @@
+/******************************* main setting *******************************/
+
+:root{
+    --main-color:#443;
+    --border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
+    --border-radius-hover:4% 95% 6% 95%/95% 4% 92% 5%;
+    --border:.2rem solid var(--main-color);
+    --border:.2rem solid var(--main-color);
+    --border-hover:.2rem dashed var(--main-color)
+}
+:root{
+    --span-color: #ff3838;
+    --bg-color: #00a2ff;
+    --btn-hover-color: #00fff2;
+    --secong-bg-color: #ffffffe9;
+    --home-bg-color: #000000;
+    --home-hover-color: #eecb04;
+    --text-color: #8d8080;
+    --box-shadow-color: var(--text-color);
+}
+*{
+    margin: 0;
+    font-family: cursive;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+*::selection{
+    background: var(--span-color);
+    color: var(--secong-bg-color);
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    background: #19197079;
+}
+section{
+    border: 2px solid var(--main-color);
+    padding: 1rem 10%;
+    height: 100vh;
+}
+img{
+    width: 30px;
+    height: 30px;
+}
+.heading{
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 1rem;
+    color: var(--text-color);
+}
+.heading span{
+    color: var(--span-color);
+}
+.btn{
+    display: inline-block;
+    padding: .8rem 3rem;
+    border: .2rem solid var(--main-color);
+    color: var(--home-bg-color);
+    cursor: pointer;
+    font-size: 1.7rem;
+    box-shadow: 4px 4px var(--box-shadow-color);
+    border-radius: 3rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 1rem;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--bg-color);
+    transition: .3s linear;
+    z-index: -1;
+}
+.btn:hover::before{
+    width: 100%;
+    left: 0;
+}
+.btn:hover{
+    transform: scale(1.1);
+    color: var(--secong-bg-color);
+}
+
+/******************************* main setting *******************************/
+
+
+/******************************* navs section *******************************/
+
+.navbar{
+    position: absolute;
+    left: 10px;
+    top: 100px;
+    height: 50px;
+    text-align: center;
+    width: 10%;
+}
+.navbar button{
+    width: 50px;
+    background: var(--secong-bg-color);
+    border: 2px solid var(--home-bg-color);
+    border-radius: 20px;
+}
+.navbar button:hover{
+    background: var(--home-bg-color);
+}
+.navbar a{
+    font-size: 12px;
+    text-align: center;
+    color: var(--home-bg-color);
+}
+.navbar a:hover{
+    color: var(--secong-bg-color);
+}
+
+/******************************* navs section *******************************/
+
+
+/*************************** order section starts **************************/
+
+.order .row{
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.order .row .image{
+    flex: 1 1 30rem;
+}
+.order .row .image img{
+    height: 100%;
+    width: 70%;
+    object-fit: cover;
+    border-radius: .5rem;
+    margin-left: 50px;
+}
+.order .row form{
+    padding: 5rem;
+}
+.order .row form .inputBox{
+    display: flex;
+    margin-left: 60px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.order .row form .inputBox input, .order .row form textarea{
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: 4px 6px var(--box-shadow-color);
+    font-size: 1.7rem;
+    color: var(--main-color);
+    text-transform: none;
+    border: .2rem solid var(--home-bg-color);
+    border-radius: .5rem;
+    width: 49%;
+}
+.order .row form textarea{
+    margin-left: 60px;
+    width: 100%;
+    resize: none;
+    box-shadow: 4px 6px var(--box-shadow-color);
+    height: 15rem;
+}
+.order .row form .btn{
+    box-shadow: 4px 6px var(--box-shadow-color);
+    margin-left: 60px;
+    background: none;
+}
+.order .row form .btn:hover{
+    background: var(--span-color);
+}
+
+/****************************** order section ends ****************************/
+
+
+/********************************* media query ********************************/
+
+@media(max-width: 1280px) {
+    .heading{
+        margin-top: 10%;
+    }
+}
+@media(max-width: 1024px) {
+    section{
+        padding: 1rem 1%;
+    }
+    .heading{
+        margin-top: 10px;
+    }
+    .order .row .image img{
+        margin-left: 100px;
+    }
+}
+@media(max-width: 768px) {
+    .heading{
+        margin-top: 40px;
+    }
+    .order .row .image img{
+        width: 30%;
+    }
+}
+@media(max-width: 375px) {
+    section{
+        padding: 0rem 0%;
+    }
+    .heading{
+        margin-top: 0;
+    }
+    .order .row form{
+        padding-top: 3rem;
+    }
+    .order .row .image img{
+        width: 20%;
+    }
+}
+
+/******************************** media query ********************************/

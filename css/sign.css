@@ -1,0 +1,181 @@
+/******************************* main setting *******************************/
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+:root{
+    --bg-color: #3c00a0;
+    --secong-bg-color: #ffffffe9;
+    --home-bg-color: #000000;
+    --home-hover-color: #eecb04;
+    --span-color: #ff3838;
+    --btn-hover-color: #00fff2;
+    --text-color: #8d8080;
+}
+
+/******************************* main setting *******************************/
+
+
+/******************************* navs section *******************************/
+
+.navbar{
+    position: absolute;
+    left: 10px;
+    top: 100px;
+    height: 50px;
+    z-index: 1000;
+    text-align: center;
+    cursor: pointer;
+    width: 10%;
+}
+.navbar button{
+    width: 50px;
+    background: var(--secong-bg-color);
+    border: 2px solid var(--home-bg-color);
+    cursor: pointer;
+    border-radius: 20px;
+}
+.navbar button:hover{
+    background: var(--home-bg-color);
+}
+.navbar a{
+    font-size: 12px;
+    text-align: center;
+    color: var(--home-bg-color);
+}
+.navbar a:hover{
+    color: var(--secong-bg-color);
+}
+
+/******************************* navs section *******************************/
+
+
+/******************************* body section *******************************/
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#0808ffcc, #0dd14ecc), url(../img/Vase.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.form-box{
+    width: 90%;
+    max-width: 450px;
+    height: 600px;
+    position: absolute;
+    border: 2px solid var(--secong-bg-color);
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    backdrop-filter: blur(50px);
+    padding: 50px 60px 70px;
+    text-align: center;
+}
+.form-box h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: var(--secong-bg-color);
+    position: relative;
+}
+.form-box h1::after{
+    content: "";
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: var(--secong-bg-color);
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.input-field{
+    margin: 20px 0;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+input{
+    width: 100%;
+    font-weight: 20px;
+    color: var(--secong-bg-color);
+    background: transparent;
+    border: 2px solid var(--secong-bg-color);
+    outline: 30px var(--secong-bg-color);
+    padding: 18px 15px;
+}
+.input-field img{
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+.input-field #hh{
+    margin-right: 13px;
+    width: 30px;
+    height: 30px;
+}
+form p a{
+    text-decoration: none;
+    color: var(--home-hover-color);
+    font-size: 19px;
+}
+form p{
+    text-decoration: none;
+    color: var(--secong-bg-color);
+    font-size: 20px;
+}
+.btn-field{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-field button{
+    flex-basis: 48%;
+    background: var(--bg-color);
+    color: var(--secong-bg-color);
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+}
+.input-group{
+    height: 280px;
+}
+.btn-field button.disable{
+    background: var(--secong-bg-color);
+    color: var(--home-bg-color);
+}
+.privacy a{
+    font-size: 23px;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    padding: 25px 0;
+    padding-top: 50px;
+    color: var(--home-hover-color);
+}
+
+/******************************* body section *******************************/
+
+
+/******************************** media query *******************************/
+
+@media (max-width: 375px) {
+    .form-box{
+        border: none;
+    }
+}
+
+/******************************** media query *******************************/
